@@ -1,8 +1,8 @@
 require 'pry-byebug'
 require_relative 'models/artist'
 require_relative 'models/album'
-Artist.delete_all()
 Album.delete_all()
+Artist.delete_all()
 
 artist1 = Artist.new({
   'name' => 'The Beatles'
@@ -12,8 +12,13 @@ artist2 = Artist.new({
   'name' => 'Ludwig Van Beethoven'
 })
 
+artist3 = Artist.new({
+  'name' => 'Ludwig Van Beethoven'
+})
+
 artist1.save()
 artist2.save()
+artist3.save()
 
 album1 = Album.new({
   'title' => 'Revolver',
